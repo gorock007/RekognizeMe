@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_back"
+    tools:context=".MainActivity">
+
+   <ImageView
+       android:id="@+id/captureImage"
+       android:layout_width="match_parent"
+       android:layout_height="250dp"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="18dp"
+       android:padding="15dp"
+       android:src="@drawable/scan" />
+   <LinearLayout
+       android:id="@+id/imageBtn"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/captureImage"
+       android:orientation="vertical"
+       android:layout_margin="10dp">
+
+      <GridLayout
+          android:id="@+id/grid1"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:columnOrderPreserved="false"
+          android:alignmentMode="alignMargins"
+          android:columnCount="2"
+          android:rowCount="1">
+
+         <!--            Camera CardView -->
+         <androidx.cardview.widget.CardView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_columnWeight="1"
+             android:layout_rowWeight="1"
+             app:cardElevation="6dp"
+             app:cardCornerRadius="12dp"
+             android:layout_margin="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+               <ImageView
+                   android:id="@+id/cameraBtn"
+                   android:layout_width="80dp"
+                   android:layout_height="80dp"
+                   android:src="@drawable/camera"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="12dp"
+                   android:fontFamily="@font/prompt"
+                   android:text="Camera"
+                   android:textColor="#6f6f6f"
+                   android:textSize="18sp" />
+            </LinearLayout>
+
+         </androidx.cardview.widget.CardView>
+
+         <!--            Gallery CardView-->
+         <androidx.cardview.widget.CardView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_columnWeight="1"
+             android:layout_rowWeight="1"
+             app:cardElevation="6dp"
+             app:cardCornerRadius="12dp"
+             android:layout_margin="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+               <ImageView
+                   android:id="@+id/galleryBtn"
+                   android:layout_width="80dp"
+                   android:layout_height="80dp"
+                   android:src="@drawable/gallery"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="12dp"
+                   android:fontFamily="@font/prompt"
+                   android:text="Gallery"
+                   android:textColor="#6f6f6f"
+                   android:textSize="18sp" />
+            </LinearLayout>
+
+         </androidx.cardview.widget.CardView>
+
+
+      </GridLayout>
+
+      <Button
+          android:id="@+id/analyseBtn"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/grid1"
+          android:layout_margin="5dp"
+          android:backgroundTint="@color/teal_txt"
+          android:fontFamily="@font/prompt"
+          android:includeFontPadding="false"
+          android:text="Analyse Image"
+          android:textStyle="bold"
+          android:textColor="#6f6f6f"
+          android:textSize="15sp"
+          app:cornerRadius="15dp">
+
+      </Button>
+
+      <TextView
+          android:id="@+id/resultText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/analyseBtn"
+          android:textSize="20sp"
+          android:textColor="@color/white"
+          android:scrollHorizontally="true"
+          >
+
+      </TextView>
+   </LinearLayout>
+
+   <ProgressBar
+       android:id="@+id/progressBar"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginBottom="80dp"
+       android:visibility="gone"
+       >
+   </ProgressBar>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/analyseResults"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/imageBtn"
+       android:layout_alignParentBottom="true"
+       android:orientation="horizontal"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+
+   </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

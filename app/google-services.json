@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "382630151443",
+    "project_id": "reckognizeme",
+    "storage_bucket": "reckognizeme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382630151443:android:a1b7d9ffca1d14c9f386e6",
+        "android_client_info": {
+          "package_name": "com.example.rekognizeme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382630151443-8eflporh9jalqo8ij2iu1mm7msvbnif8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEG92TcPg0hUF_cZvgc3WuxKqjJ3rEY7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382630151443-8eflporh9jalqo8ij2iu1mm7msvbnif8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
